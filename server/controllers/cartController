@@ -1,0 +1,77 @@
+const Cart = require("../modules/cartModule");
+const Item = require("../modules/itemModule");
+
+const get_item_from_cart = async (req, res) => {
+  try {
+    let cart = await Cart.findOne({ userId: req.params.id });
+    res.send(cart)
+    // if (cart) {
+    //   res.send(cart);
+    // } else {
+    //   res.send({message: false});
+    // }
+  } catch (err) {
+    console.log(err);
+    res.send("Something went wrong");
+  }
+};
+
+const add_item_to_cart = async (req, res) => {
+  const userId = req.params.id;
+  const { itemId, quantity } = req.body;
+
+  try {
+    // check if cart and item already exist
+    let cart = await Cart.findOne({ _id: req.params.id });
+    let item = await Item.findOne({ _id: req.body.itemId });
+    if (!item) {
+      res.send("Item not found!");
+    }
+
+    const price = item.price;
+    const name = item.title;
+
+    // if cart exists for the user
+    if (cart) {
+      // check if product exists inside the cart
+      const existingItemIndex = cart.items.findIndex(
+        p => p.itemId == itemId
+      );
+      if (existingItemIndex >= 0) {
+        // or if(existingItemIndex > -1)
+        let existingItem = cart.items[existingItemIndex];
+        existingItem.quantity += quantity;
+        cart.items[existingItemIndex] = existingItem;
+      } else {
+        // if products doesn't exist inside the cart
+        cart.items.push({productId, name, quantity, price});
+      }
+      // Calculate the bill and save the cart
+      cart.bill += req.items.quantity * req.items.price;
+      await cart.save();
+      res.send(cart);
+    } else {
+      // the cart doesn't exist for the user
+      // create new cart
+      let newCart = new Cart({
+        userId: req.params.id,
+        items: [{itemId: req.body.itemId, 
+        name :  req.body.name, 
+        price: req.body.price, 
+        quantity : req.body.quantity}
+        ],
+        bill: req.body.quantity * req.body.price,
+      });
+      await newCart.save();
+      res.send(newCart);
+    }
+  } catch (err) {
+    console.log(err);
+    res.send("Something went wrong");
+  }
+};
+
+module.exports = {
+  get_item_from_cart,
+  add_item_to_cart,
+};

@@ -1,0 +1,30 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const OrderSchema = new Schema({
+  userId: {
+    type: String,
+  },
+  items: {
+    itemId: String,
+    name: String,
+    price: Number,
+    quantity: {
+      type: Number,
+      required: true,
+      min: 1,
+      default: 1,
+    },
+  },
+  bill: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  date_added: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = Order = mongoose.model("order", CartSchema);

@@ -1,0 +1,50 @@
+const Item = require("../modules/itemModule");
+
+
+const getItem = async (req, res) => {
+let items = await Item.find({})
+res.json(items)
+};
+
+const getLaptops = async (req, res) => {
+  let laptops = await Item.find({category: "laptop"})
+  res.send({list: laptops})
+}; 
+
+const getMobiles = async (req, res) => {
+  let laptops = await Item.find({category: "mobile"})
+  res.send({list: laptops})
+}; 
+
+const getAccessories = async (req, res) => {
+  let laptops = await Item.find({category: "accessories"})
+  res.send({list: laptops})
+}; 
+
+const createItem = async (req, res) => {
+  let newItem = new Item (req.body) 
+  await newItem.save();
+  // res.send({ message: true });
+  res.json(newItem)
+};
+
+const updateItem = async (req, res) => {
+ await Item.updateOne({_id: req.params.id}, req.body);
+ res.send({ message: "updated" }); 
+}
+
+const deleteItem = async (req, res) => {
+  await Item.deleteOne({_id: req.params.id})
+  res.send({ message: "deleted" });
+};
+
+
+module.exports = {
+ getItem,
+ createItem,
+ updateItem,
+ deleteItem,
+ getLaptops,
+ getMobiles,
+ getAccessories,
+};
