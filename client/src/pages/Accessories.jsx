@@ -82,13 +82,13 @@ function Accessories() {
 
   return (
     <div>
-      <NavbarProfile>{user.username}</NavbarProfile>
+      <NavbarProfile user={user} />
       <h1>Accessories</h1>
       <Container>
         <ListContainer>
           {list.map((list) => {
             return (
-              <Cards onClick={() => display(list)}>
+              <Cards onClick={() => display(list)} key={list._id}>
                 <Image
                   src="https://images.static-thomann.de/pics/bdb/494897/15157953_800.jpg"
                   alt={list.name}

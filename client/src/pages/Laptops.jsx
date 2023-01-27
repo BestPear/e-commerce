@@ -83,13 +83,13 @@ function Laptops() {
 
   return (
     <div>
-      <NavbarProfile>{user.username}</NavbarProfile>
+      <NavbarProfile user={user} />
       <h1>Laptops</h1>
       <Container>
         <ListContainer>
           {list.map((list) => {
             return (
-              <Cards onClick={() => display(list)}>
+              <Cards onClick={() => display(list)} key={list._id}>
                 <Image
                   src="https://laptopmarket.gr/images/thumbnails/500/350/detailed/2/111.jpeg"
                   alt={list.name}

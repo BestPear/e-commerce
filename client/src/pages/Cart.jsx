@@ -1,11 +1,8 @@
+import React, {useState, useEffect} from "react";
 import axios from "axios";
-import { useState, useEffect } from "react";
 import NavbarProfile from "../components/NavbarProfile";
-import Hero from "../components/Hero";
-import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 
-function Profile() {
+const Cart = () => {
     const [user, setUser] = useState("");
 
     useEffect(() => {
@@ -20,15 +17,8 @@ function Profile() {
         }
     }, []);
     return (
-        <div>
-            <NavbarProfile 
-                user={user}
-            />
-            <Hero />
-            <Categories />
-            <Footer />
-        </div>
+    <NavbarProfile user={user}/>
     );
-}
+};
 
-export default Profile;
+export default Cart;
