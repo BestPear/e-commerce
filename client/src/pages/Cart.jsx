@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavbarProfile from "../components/NavbarProfile";
+import Footer from "../components/Footer";
 
 const Cart = () => {
     const [user, setUser] = useState("");
@@ -17,7 +18,10 @@ const Cart = () => {
         }
     }, []);
     return (
-    <NavbarProfile user={user}/>
+        <>
+            <NavbarProfile user={user} />
+            <Footer />
+        </>
     );
 };
 
