@@ -10,11 +10,13 @@ const authRouter = require("./routers/authRoute");
 const itemRouter = require("./routers/itemRoute");
 const cartRouter = require("./routers/cartRoute");
 const User = require("./modules/userModule");
+const cookieParser= require("cookie-parser")
 app.use(
     cors({
         origin: "*",
     })
 );
+app.use(cookieParser());
 
 app.use(express.json());
 

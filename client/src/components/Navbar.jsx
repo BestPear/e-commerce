@@ -36,6 +36,9 @@ cursor: pointer;
 function Navbar () {
   const navigate = useNavigate();
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  function logOut() {
+
+  }
 
   return ( <Container>
     <Logo>Electronics Shop</Logo>
@@ -43,7 +46,6 @@ function Navbar () {
       <List>
         <ListItem onClick={()=> {navigate("/auth/adminlogin")}}>Admin</ListItem>
         <ListItem onClick={()=> {navigate("/auth/register")}}>Register</ListItem>
-
         <ListItem onClick={()=> {navigate("/auth/login")}}>Login</ListItem>
         <ListItem> <HiOutlineShoppingCart/> </ListItem>
       </List>

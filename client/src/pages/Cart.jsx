@@ -4,28 +4,38 @@ import NavbarProfile from "../components/NavbarProfile";
 import Footer from "../components/Footer";
 
 const Cart = () => {
-    const [user, setUser] = useState("");
-    const [list , setList] = useState(JSON.parse(localStorage.getItem("shopingList")) || [])
-    useEffect(() => {
-        if (localStorage.getItem("token")) {
-            axios
-                .post("http://localhost:3636/auth/verify", {
-                    token: localStorage.getItem("token"),
-                })
-                .then(({ data }) => {
-                    setUser(data);
-                });
-        }
-    }, []);
-    return (
-        <>
-            <NavbarProfile user={user} />
-                 {list.map((e , i)=>{
-                    return <li>{e.items.name} -- * {e.items.quantity} =={e.items.price}</li>
-                 })}
-            <Footer />
-        </>
-    );
+  const [user, setUser] = useState("");
+  const [list, setList] = useState(
+    JSON.parse(localStorage.getItem("shopingList")) || []
+  );
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      axios
+        .post("http://localhost:3636/auth/verify", {
+          token: localStorage.getItem("token"),
+        })
+        .then(({ data }) => {
+          setUser(data);
+        });
+    }
+  }, []);
+  
+//   const userList = list.filter((items) => items.name == "Toshiba");
+//   setList(userList);
+
+  return (
+    <>
+      <NavbarProfile user={user} />
+      {list.map((e, i) => { 
+        return (
+          <li key = {i} >
+            {e.items.name} -- * {e.items.quantity} =={e.items.price}
+          </li>
+        );
+      })}
+      <Footer />
+    </>
+  );
 };
 
 export default Cart;

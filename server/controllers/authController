@@ -37,10 +37,20 @@ const loginUser = async (req, res) => {
   if (user) {
     bcrypt.compare(req.body.password, user.password, function (err, result) {
       if (result) {
-        var token = jwt.sign({ id: user._id }, process.env.TOKEN_KEY, {
+        /*...*/ const payload = {
+          id: user._id,
+          name: user.username,
+        };
+        var token = jwt.sign(payload, process.env.TOKEN_KEY, {
           expiresIn: process.env.TOKEN_EXPIRES_IN,
         });
-        res.send({ token });
+        /*...*/ return res
+          .cookie("access_token", token, {
+            httpOnly: true,
+          })
+          .status(200)
+          .send({ token });
+        // res.send({ token });
       } else {
         res.send({ message: "Wrong password" });
       }
@@ -50,6 +60,23 @@ const loginUser = async (req, res) => {
   }
 };
 
+const logOutUser = (req, res) => {
+  res.clearCookie("access_token");
+  return res.status(200).json({ message: "Logout Successful" });
+};
+
+const status = (req, res) => {
+  const token = req.cookies.access_token;
+  if (!token) {
+    return res.json(false);
+  }
+  return jwt.verify(token, process.env.TOKEN_KEY, (error) => {
+    if (error) {
+      return res.json(false);
+    }
+    return res.json(true);
+  });
+};
 
 const verifyUser = async (req, res) => {
   jwt.verify(req.body.token, process.env.TOKEN_KEY, async (err, payload) => {
@@ -66,4 +93,6 @@ module.exports = {
   registerUser,
   loginUser,
   verifyUser,
+  logOutUser,
+  status,
 };
