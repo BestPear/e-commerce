@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 
 const Container = styled.div `
 display: flex;
@@ -34,12 +35,15 @@ cursor: pointer;
 
 function Navbar () {
   const navigate = useNavigate();
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return ( <Container>
     <Logo>Electronics Shop</Logo>
     <div>
       <List>
+        <ListItem onClick={()=> {navigate("/auth/adminlogin")}}>Admin</ListItem>
         <ListItem onClick={()=> {navigate("/auth/register")}}>Register</ListItem>
+
         <ListItem onClick={()=> {navigate("/auth/login")}}>Login</ListItem>
         <ListItem> <HiOutlineShoppingCart/> </ListItem>
       </List>

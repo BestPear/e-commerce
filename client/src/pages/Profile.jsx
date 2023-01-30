@@ -19,6 +19,7 @@ function Profile() {
                 });
         }
     }, []);
+
     return (
         <div>
             <NavbarProfile 

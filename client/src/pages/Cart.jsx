@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Cart = () => {
     const [user, setUser] = useState("");
-
+    const [list , setList] = useState(JSON.parse(localStorage.getItem("shopingList")) || [])
     useEffect(() => {
         if (localStorage.getItem("token")) {
             axios
@@ -20,6 +20,9 @@ const Cart = () => {
     return (
         <>
             <NavbarProfile user={user} />
+                 {list.map((e , i)=>{
+                    return <li>{e.items.name} -- * {e.items.quantity} =={e.items.price}</li>
+                 })}
             <Footer />
         </>
     );

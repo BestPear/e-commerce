@@ -93,6 +93,11 @@ function Laptops() {
             },
             bill: quantity * item.price
         };
+        console.log(itemToMove)
+        var itemsList = JSON.parse(localStorage.getItem("shopingList")) || []
+        itemsList.push(itemToMove)
+        localStorage.setItem("shopingList" , JSON.stringify(itemsList) )
+        
     };
 
     const handleChange = (e) => {
