@@ -61,7 +61,6 @@ function Mobiles(props) {
     const [user, setUser] = useState("");
     const [item, setItem] = useState("");
     const [quantity, setQuantity] = useState(0);
-    // console.log(quantity);
 
     useEffect(() => {
         axios.get("http://localhost:3636/items/mobiles").then(({ data }) => {
@@ -83,17 +82,21 @@ function Mobiles(props) {
     }
 
     const moveToCart = () => {
-        console.log(item);
+        // console.log(item);
         const itemToMove = {
             userId: user._id,
             items: {
                 itemId: item._id,
                 name: item.name,
                 quantity: quantity,
-                price: item.price
+                price: item.price,
             },
-            bill: quantity * item.price
+            bill: quantity * item.price,
         };
+        // console.log(itemToMove);
+        let itemsList = JSON.parse(localStorage.getItem("shoppingList")) || [];
+        itemsList.push(itemToMove);
+        localStorage.setItem("shoppingList", JSON.stringify(itemsList));
     };
 
     const handleChange = (e) => {
@@ -102,7 +105,7 @@ function Mobiles(props) {
 
     return (
         <div>
-            <NavbarProfile user={user}/>
+            <NavbarProfile user={user} />
             <h1>Mobile phones</h1>
             <Container>
                 <ListContainer>
@@ -132,12 +135,11 @@ function Mobiles(props) {
                             <p>{item.description}</p>
                             <p>{item.category}</p>
                             <p> {item.price}</p>
-                            <InputNumber 
+                            <InputNumber
                                 quantity={quantity}
                                 handleChange={handleChange}
                             />
-                            <ButtonBlue 
-                            moveToCart={moveToCart}>
+                            <ButtonBlue moveToCart={moveToCart}>
                                 Purchase
                             </ButtonBlue>
                         </DisplayCreated>

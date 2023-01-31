@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     align-items: center;
 `;
 
-function Accessories() {
+function Accessories(props) {
     const [list, setList] = useState([]);
     const [user, setUser] = useState("");
     const [item, setItem] = useState("");
@@ -84,7 +84,7 @@ function Accessories() {
     }
 
     const moveToCart = () => {
-        console.log(item);
+        // console.log(item);
         const itemToMove = {
             userId: user._id,
             items: {
@@ -95,6 +95,10 @@ function Accessories() {
             },
             bill: quantity * item.price,
         };
+        // console.log(itemToMove);
+        let itemsList = JSON.parse(localStorage.getItem("shoppingList")) || [];
+        itemsList.push(itemToMove);
+        localStorage.setItem("shoppingList", JSON.stringify(itemsList));
     };
 
     const handleChange = (e) => {
