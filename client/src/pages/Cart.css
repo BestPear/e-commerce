@@ -6,10 +6,9 @@
     border-collapse: collapse;
 }
 
-.item-container {
-
-    /* display: flex;
-    justify-content: space-between; */
+.item-container input {
+    width: 30px;
+    padding: 5px;
 }
 
 td {

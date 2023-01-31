@@ -34,11 +34,18 @@ const Cart = () => {
                 <table className="cart-container">
                     <tbody>
                         {currentUserList.map((item, index) => {
-                            return <CartItem item={item} key={index} />;
+                            return (
+                                <CartItem
+                                    list={list}
+                                    setList={setList}
+                                    item={item}
+                                    key={index}
+                                />
+                            );
                         })}
                         <tr>
                             <td colSpan={4}>Total</td>
-                            <td>
+                            <td colSpan={2}>
                                 {currentUserList.reduce((acc, current) => {
                                     return acc + current.bill;
                                 }, 0)}
