@@ -18,11 +18,14 @@ const Cart = () => {
                 });
         }
     }, []);
+    
+    const currentUserList = list.filter(item => item.userId === user._id);
+
     return (
         <>
             <NavbarProfile user={user} />
-            {list.length === 0 ? <h1>Your cart is empty</h1> : 
-            (list.map((e, i) => {
+            {currentUserList.length === 0 ? <h1>Your cart is empty</h1> : 
+            (currentUserList.map((e, i) => {
                 return (
                     <li key={i}>
                         {e.items.name} -- * {e.items.quantity} =={e.items.price}

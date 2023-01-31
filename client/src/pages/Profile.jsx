@@ -4,9 +4,11 @@ import NavbarProfile from "../components/NavbarProfile";
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
     const [user, setUser] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (localStorage.getItem("token")) {
@@ -20,14 +22,11 @@ function Profile() {
         }
     }, []);
 
-    console.log(user);
     return (
         <div>
-            <NavbarProfile 
-                user={user}
-            />
+            <NavbarProfile user={user} />
             <Hero />
-            <Categories user={user}/>
+            <Categories />
             <Footer />
         </div>
     );

@@ -56,6 +56,12 @@ function NavbarProfile(props) {
                             }}
                         />{" "}
                     </ListItem>
+                    <ListItem
+                        onClick={() => {
+                            localStorage.removeItem("token");
+                            navigate("/");
+                        }}
+                    >Log Out</ListItem>
                 </List>
             </div>
         </Container>
