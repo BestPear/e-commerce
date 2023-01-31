@@ -32,6 +32,24 @@ const ListItem = styled.li`
         color: orange;
     }
 `;
+const ButtonAdmin = styled.button`
+    width: 5rem;
+    margin-block: 0;
+    margin-inline: 1rem;
+    font-size: 1.2rem;
+    background-color: #dc7300;
+    border-radius: 5px;
+    transition: 0s background-color;
+
+    cursor: pointer;
+    &:hover {
+        background-color: #e05404;
+        transition-delay: 0.1s;
+    }
+    &:active {
+        background-color: #7f1917;
+    }
+`;
 
 function NavbarProfile(props) {
     const navigate = useNavigate();
@@ -46,23 +64,58 @@ function NavbarProfile(props) {
                 Electronics Shop
             </Logo>
             <div>
-                <List>
-                    <ListItem>Welcome {props.user.username}</ListItem>
-                    <ListItem>
-                        {" "}
-                        <HiOutlineShoppingCart 
+                {/*  */}
+
+                {props.user.role !== "admin" ? (
+                    <List>
+                        <ListItem>Welcome {props.user.username}</ListItem>
+                        <ListItem>
+                            {" "}
+                            <HiOutlineShoppingCart
+                                onClick={() => {
+                                    navigate("/profile/cart");
+                                }}
+                            />{" "}
+                        </ListItem>
+                        <ListItem
                             onClick={() => {
-                                navigate("/profile/cart");
+                                localStorage.removeItem("token");
+                                navigate("/");
                             }}
-                        />{" "}
-                    </ListItem>
-                    <ListItem
-                        onClick={() => {
-                            localStorage.removeItem("token");
-                            navigate("/");
-                        }}
-                    >Log Out</ListItem>
-                </List>
+                        >
+                            Log Out
+                        </ListItem>
+                    </List>
+                ) : (
+                    <List>
+                        <ListItem>Welcome {props.user.username}</ListItem>
+                        <ListItem>
+                            {" "}
+                            <HiOutlineShoppingCart
+                                onClick={() => {
+                                    navigate("/profile/cart");
+                                }}
+                            />{" "}
+                        </ListItem>
+                        <ListItem
+                            onClick={() => {
+                                localStorage.removeItem("token");
+                                navigate("/");
+                            }}
+                        >
+                            Log Out
+                        </ListItem>
+                        <ButtonAdmin
+                            onClick={() => {
+                                navigate("/profile/admin");
+                            }}
+                        >
+                            ADMIN
+                        </ButtonAdmin>
+                    </List>
+                )}
+
+                {/*  */}
             </div>
         </Container>
     );

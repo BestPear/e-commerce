@@ -45,6 +45,26 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: center;
 `;
+const ButtonClear = styled.button`
+    width: 10rem;
+    margin-block: 0.8rem 0;
+    margin-inline: 2rem;
+    font-size: 1.2rem;
+    background-color: #24a0ed;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0s background-color;
+    padding: 0.5em 2em;
+
+    cursor: pointer;
+    &:hover {
+        background-color: #1183ca;
+        transition-delay: 0.1s;
+    }
+    &:active {
+        background-color: #db5f12;
+    }
+`;
 
 function Admin() {
     const [user, setUser] = useState("");
@@ -53,6 +73,7 @@ function Admin() {
     const [category, setCategory] = useState("");
     const [price, setPrice] = useState("");
     const [item, setItem] = useState("");
+    const [items, setItems] = useState("");
     const navigate = useNavigate();
 
     // console.log(user);
@@ -65,9 +86,16 @@ function Admin() {
                 })
                 .then(({ data }) => {
                     setUser(data);
-                })
+                });
         }
+        axios.get("http://localhost:3636/items")
+        .then(({data}) => {
+            setItems(data);
+        });
     }, []);
+
+    console.log(user);
+    console.log(items);
 
     function save() {
         axios
@@ -94,6 +122,7 @@ function Admin() {
     function clear() {
         window.location.reload(true);
     }
+
     return (
         <div>
             <NavbarProfile user={user} />
@@ -132,13 +161,13 @@ function Admin() {
                             }}
                         />
                     </Label>
-                    <ButtonBlue
+                    <ButtonClear
                         onClick={() => {
                             save();
                         }}
                     >
                         Add Item
-                    </ButtonBlue>
+                    </ButtonClear>
                     <ButtonOrange
                         onClick={() => {
                             clear();
