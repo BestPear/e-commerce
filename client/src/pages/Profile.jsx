@@ -19,13 +19,15 @@ function Profile() {
                 });
         }
     }, []);
+
+    console.log(user);
     return (
         <div>
             <NavbarProfile 
                 user={user}
             />
             <Hero />
-            <Categories />
+            <Categories user={user}/>
             <Footer />
         </div>
     );
