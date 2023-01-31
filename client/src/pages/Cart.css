@@ -1,0 +1,19 @@
+.cart-container {
+    width: 98%;
+    max-width: 600px;
+    margin: 50px auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.item-container {
+
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: start;
+}
