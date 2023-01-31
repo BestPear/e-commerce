@@ -40,25 +40,21 @@ const Span = styled.span`
     border-radius: 2px;
 `;
 
-function Categories(props) {
+function Categories() {
     const navigate = useNavigate();
-    console.log(props.user);
     return (
         <Container>
             <Mobile
-                // user={props.user}
                 onClick={() => navigate("/profile/category/mobile")}
             >
                 <Span> Mobile </Span>
             </Mobile>
             <Laptop
-                // user={props.user}
                 onClick={() => navigate("/profile/category/laptops")}
             >
                 <Span>Laptop </Span>
             </Laptop>
             <Accessories
-                // user={props.user}
                 onClick={() => navigate("/profile/category/accessories")}
             >
                 <Span>Accessories</Span>
