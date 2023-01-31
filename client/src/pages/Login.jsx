@@ -55,9 +55,6 @@ function Login() {
                 password,
             })
             .then(({ data }) => {
-                // console.log(jwtDecode(data).id);
-                console.log(data);
-
                 if (data.token) {
                     localStorage.setItem("token", data.token);
 
