@@ -21,10 +21,9 @@ The backend was created with Node.js and Express.js and the frontend with React 
 **Express.js** was used together with Node.js, as it links easily and fast to databases. 
 **React** helped to build the frontend part of our application focused on small components and ui design. In addition, helps build applications much faster. 
 
-The goal for this project was to add user verification with a token, as well as to get more familiar with React states, props and components. 
-We were able to complete so far only half of the store, namely user registration, login and verification. Once logged in the user can view the products by category and individually. The backend part for the users and items is complete. 
+The goal for this project was to understand someone else's code and add some more features to the project, as well as to get more familiar with React states, props, and components.
 
-In the future we would like to complete the cart and orders part of the application, as well as make the UI smoother and a nicer experience for the user. 
+We were able to add an admin role to the users. If a user has an admin role he/she will see an Admin button on the top-right corner of the page, and be able to add new products to the shop. As a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. In the future, we would like to enhance the shopping cart features.  Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users. 
 
 ## Installation
 The project is uploaded to Github.
