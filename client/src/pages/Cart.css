@@ -4,6 +4,7 @@
     margin: 50px auto;
     border: 1px solid black;
     border-collapse: collapse;
+    background-color: white;
 }
 
 .item-container input {
@@ -15,4 +16,13 @@ td {
     padding: 10px;
     border: 1px solid black;
     text-align: start;
+}
+
+tbody>td {
+    font-weight: bolder;
+    background-color: rgb(201, 201, 206);
+}
+
+.total-amount {
+    background-color: rgb(201, 201, 206);
 }

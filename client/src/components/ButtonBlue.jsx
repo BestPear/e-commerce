@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const BlueButton = styled.button`
-    width: 10rem;
+    width: 11rem;
     margin-block: 0.8rem 0;
     margin-inline: 2rem;
     font-size: 1.2rem;

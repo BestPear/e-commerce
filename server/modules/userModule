@@ -17,9 +17,9 @@ const UserSchema = new mongoose.Schema({
     minlength: [8, "Minimum password lenght must be 8 characters"],
   },
   registerDate: {
-    type: Date, 
-    default: Date.now()
-  }
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 const User = mongoose.model("User", UserSchema);

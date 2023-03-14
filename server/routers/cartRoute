@@ -5,5 +5,4 @@ router.get("/:id", cartController.get_item_from_cart);
 router.post("/:id", cartController.add_item_to_cart);
 // router.delete("/:userId/:itemId", cartController.delete_item_from_cart);
 
-
 module.exports = router;

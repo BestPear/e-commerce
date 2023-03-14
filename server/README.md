@@ -84,8 +84,12 @@ The rest of the project remains unfinished
 
 ## Credits
 The project owners are:
-- Anita (Ourania) Angelidou
-- Mohamed Asif Yousufi 
+- Anita (Ourania) Angelidou,
+- Mohamed Asif Yousufi
+  
+The project updated by:
+- Sofia Tachmatzidou,
+- Mehmet TOKGOZ
 
 
 
