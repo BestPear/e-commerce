@@ -9,7 +9,4 @@ router.get("/laptops", itemController.getLaptops);
 router.get("/mobiles", itemController.getMobiles);
 router.get("/accessories", itemController.getAccessories);
 
-
-
-
 module.exports = router;

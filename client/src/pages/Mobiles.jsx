@@ -7,6 +7,7 @@ import DisplayCreated from "../components/displayCreatedItem";
 import ButtonBlue from "../components/ButtonBlue";
 import InputNumber from "../components/InputNumber";
 import Footer from "../components/Footer";
+import { toast } from "react-hot-toast";
 
 const Image = styled.img`
     width: 10em;
@@ -97,6 +98,7 @@ function Mobiles(props) {
         let itemsList = JSON.parse(localStorage.getItem("shoppingList")) || [];
         itemsList.push(itemToMove);
         localStorage.setItem("shoppingList", JSON.stringify(itemsList));
+        toast.success("Item added");
     };
 
     const handleChange = (e) => {
@@ -140,7 +142,7 @@ function Mobiles(props) {
                                 handleChange={handleChange}
                             />
                             <ButtonBlue moveToCart={moveToCart}>
-                                Purchase
+                            Add to Box
                             </ButtonBlue>
                         </DisplayCreated>
                     </Right>

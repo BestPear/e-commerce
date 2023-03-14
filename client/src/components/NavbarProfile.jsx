@@ -75,7 +75,7 @@ function NavbarProfile(props) {
                                 onClick={() => {
                                     navigate("/profile/cart");
                                 }}
-                            />{" "}
+                            />
                         </ListItem>
                         <ListItem
                             onClick={() => {

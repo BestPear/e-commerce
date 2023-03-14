@@ -18,9 +18,9 @@ const ItemSchema = new mongoose.Schema({
     required: true,
   },
   date_added: {
-    type: Date, 
-    default: Date.now()
-  }
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 const Item = mongoose.model("Item", ItemSchema);

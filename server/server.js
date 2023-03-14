@@ -11,9 +11,9 @@ const itemRouter = require("./routers/itemRoute");
 const cartRouter = require("./routers/cartRoute");
 const User = require("./modules/userModule");
 app.use(
-    cors({
-        origin: "*",
-    })
+  cors({
+    origin: "*",
+  })
 );
 
 app.use(express.json());
@@ -24,5 +24,5 @@ app.use("/cart", cartRouter);
 
 // server listening
 app.listen(port, () => {
-    console.log(`Server is up at ${port}`);
+  console.log(`Server is up at ${port}`);
 });

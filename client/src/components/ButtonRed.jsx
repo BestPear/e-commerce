@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const RedButton = styled.button`
   width: 10rem;
-  margin-block: 0.8rem 0;
-  margin-inline: 2rem;
+  display: flex;
+  margin: auto;
   font-size: 1.2rem;
   background-color: #BB3B35;
   border: 1px solid black;
