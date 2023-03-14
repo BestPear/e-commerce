@@ -1,4 +1,4 @@
-# sha-e-commerce
+# SHA E-Commerce Legacy Project.
 
 ## An E-commerce shop with electronics
 
