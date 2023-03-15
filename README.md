@@ -3,7 +3,7 @@
 # Table Of Contents:  
   - [Overview](#overview)
   - [Description](#description)
-  - [Team](#technologies)
+  - [Team](#team)
   - [Technologies](#technologies)
   - [Installation and Running Application](#installation-and-running-application)
   - [Dependencies](#dependencies)
@@ -25,10 +25,10 @@ The user can create an account and then login to the application.
 The user gets authenticated via a token, using the JsonWebToken library.
 Inside the application the user can browse the products. There is one page for each category.
 
-There was a one week time limit for this project. In this period, as a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. We also added an admin role to the users. If a user has an admin role, he/she will see an "Admin" button on the top-right corner of the page, and be able to add new products to the shop. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users.
-
-## Team 
-
+There was a one week time limit for this project. In this period, as a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. We also added an admin role to the users. If a user has an admin role, he/she will see an "Admin" button on the top-right corner of the page, and be able to add new products to the shop. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users.  
+  
+## Team  
+  
 - Product Owner: Mehmet TOKGOZ,
 - Scrum Master: Sofia TACHMATZIDOU,
 - Development Team Members: Mehmet TOKGOZ, Sofia TACHMATZIDOU  
@@ -45,8 +45,7 @@ This project created using MERN Stack. **MERN Stack** was preferred for this pro
 
    **Node.js** was chosen for this application, as it is lightweight, efficient, has good performance, and is very fast in building web applications. In addition, there is a vast amount of tools in npm to support the developer.
 
-  
-
+ 
 ## Installation and Running Application
 
 The project is uploaded to Github.
