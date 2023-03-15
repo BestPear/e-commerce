@@ -15,11 +15,17 @@ The user can create an account and then login to the application.
 The user gets authenticated via a token, using the JsonWebToken library.
 Inside the application the user can browse the products. There is one page for each category.
 
-The backend was created with Node.js and Express.js and the frontend with React and styled components.
-**MERN stack** was preferred as it uses one single language, Javascript, for the frontend, as well as the backend. 
+The backend was created with Node.js and Express.js and the frontend with React and styled components.  
+
+**MERN stack** was preferred as it uses one single language, Javascript, for the frontend, as well as the backend.  
+
+ **MongoDB** is a high-performance, cost-effective database system with a schemaless database feature.
+
+**Express.js** was used together with Node.js, as it links easily and fast to databases.  
+
+**React** helped to build the frontend part of our application focused on small components and ui design. In addition, helps build applications much faster.  
+
 **Node.js** was chosen for this application, as it lightweight, efficient, has a good performance and is very fast in building web applications. In addition there is a vast amount of tools in npm to support the developer. 
-**Express.js** was used together with Node.js, as it links easily and fast to databases. 
-**React** helped to build the frontend part of our application focused on small components and ui design. In addition, helps build applications much faster. 
 
 The goal for this project was to understand someone else's code and add some more features to the project, as well as to get more familiar with React states, props, and components.
 
@@ -44,7 +50,8 @@ In case the application doesn't start at `http://localhost:3000` then:
 
 The project has the following dependencies:
 
-For the Node.js dependencies:
+For the Node.js dependencies:  
+
     "bcrypt": "^5.1.0",  
     
     "body-parser": "^1.20.1",  
@@ -84,8 +91,9 @@ React dependencies are:
     "web-vitals": "^2.1.4"  
     
 
-Environmental requirements: 
-Create a .env file and fill in the following properties with your preferences.
+Environmental requirements:  
+
+    Create a .env file and fill in the following properties with your preferences.
     MONGO_URI
     TOKEN_KEY
     TOKEN_EXPIRES_IN
