@@ -23,7 +23,7 @@ The backend was created with Node.js and Express.js and the frontend with React 
 
 The goal for this project was to understand someone else's code and add some more features to the project, as well as to get more familiar with React states, props, and components.
 
-We were able to add an admin role to the users. If a user has an admin role, he/she will see an Admin button on the top-right corner of the page, and be able to add new products to the shop. As a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users. 
+First of all there was a one week time limit for this project. In this period, as a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. We also added an admin role to the users. If a user has an admin role, he/she will see an "Admin" button on the top-right corner of the page, and be able to add new products to the shop. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users. 
 
 ## Installation
 The project is uploaded to Github.
