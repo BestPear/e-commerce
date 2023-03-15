@@ -9,6 +9,7 @@
   - [Dependencies](#dependencies)
   - [How to Use?](#how-to-use)
   - [Credits](#credits)
+  - [Demo](#demo)
 
 ## An E-commerce shop with electronics
 
@@ -132,7 +133,9 @@ The project updated by:
 - Sofia Tachmatzidou,
 - Mehmet TOKGOZ
 
+## Demo
 
+You can watch a demo of the application here: [Live-Demo](https://vimeo.com/807678443/16dc0e10eb)
 
 
 
