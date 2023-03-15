@@ -1,5 +1,15 @@
 # SHA E-Commerce Legacy Project.
 
+# Table Of Contents:  
+  - [Overview](#overview)
+  - [Description](#description)
+  - [Team](#technologies)
+  - [Technologies](#technologies)
+  - [Installation and Running Application](#installation-and-running-application)
+  - [Dependencies](#dependencies)
+  - [How to Use?](#how-to-use)
+  - [Credits](#credits)
+
 ## An E-commerce shop with electronics
 
 ## Overview
@@ -8,30 +18,37 @@ It was created using MERN stack: React for the frontend, MongoDB for the databas
 The challenges we faced was the limited time of a week for this project. Also to learn React and pass values and props between pages and components. 
 
 ## Description
-This is an application created with MERN stack, featuring an e-shop selling electronic products.
+This is an application created with MERN stack, featuring an e-shop selling electronic products. The goal for this project was to understand someone else's code and add some more features to the project, as well as to get more familiar with React states, props, and components.
 
 There are 3 main categories of products: mobile phones, laptops and accessories. 
 The user can create an account and then login to the application.
 The user gets authenticated via a token, using the JsonWebToken library.
 Inside the application the user can browse the products. There is one page for each category.
 
-The backend was created with Node.js and Express.js and the frontend with React and styled components.  
+There was a one week time limit for this project. In this period, as a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. We also added an admin role to the users. If a user has an admin role, he/she will see an "Admin" button on the top-right corner of the page, and be able to add new products to the shop. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users.
 
-**MERN stack** was preferred as it uses one single language, Javascript, for the frontend, as well as the backend.  
+## Team 
 
- **MongoDB** is a high-performance, cost-effective database system with a schemaless database feature.
+- Product Owner: Mehmet TOKGOZ,
+- Scrum Master: Sofia TACHMATZIDOU,
+- Development Team Members: Mehmet TOKGOZ, Sofia TACHMATZIDOU  
 
-**Express.js** was used together with Node.js, as it links easily and fast to databases.  
+## Technologies
 
-**React** helped to build the frontend part of our application focused on small components and ui design. In addition, helps build applications much faster.  
+This project created using MERN Stack. **MERN Stack** was preferred for this project because it allows faster application development using only javascript and without combining different programming languages.  
 
-**Node.js** was chosen for this application, as it lightweight, efficient, has a good performance and is very fast in building web applications. In addition there is a vast amount of tools in npm to support the developer. 
+   **MongoDB** **(mongoose)** is a high-performance, cost-effective database system with a schemaless database feature.  
 
-The goal for this project was to understand someone else's code and add some more features to the project, as well as to get more familiar with React states, props, and components.
+   **Express.js** was used with Node.js, as it links easily and fast to databases.  
 
-First of all there was a one week time limit for this project. In this period, as a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. We also added an admin role to the users. If a user has an admin role, he/she will see an "Admin" button on the top-right corner of the page, and be able to add new products to the shop. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users.  
+   **React**, **Styled components**, were used to enhance the web design.  
 
-## Installation
+   **Node.js** was chosen for this application, as it is lightweight, efficient, has good performance, and is very fast in building web applications. In addition, there is a vast amount of tools in npm to support the developer.
+
+  
+
+## Installation and Running Application
+
 The project is uploaded to Github.
 
 To get the project on your computer follow these steps:
@@ -98,7 +115,7 @@ Environmental requirements:
     TOKEN_KEY
     TOKEN_EXPIRES_IN
 
-## How to use the project
+## How to use?
 Initially at the beginning of the project the user lands at the home page `/`
 There the user can Register, Login or browse the categories
 Once the user registers at `/auth/register`, he/she gets redirected to the login page `/auth/login`
