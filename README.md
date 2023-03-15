@@ -23,7 +23,7 @@ The backend was created with Node.js and Express.js and the frontend with React 
 
 The goal for this project was to understand someone else's code and add some more features to the project, as well as to get more familiar with React states, props, and components.
 
-We were able to add an admin role to the users. If a user has an admin role, he/she will see an Admin button on the top-right corner of the page, and be able to add new products to the shop. As a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users. 
+First of all there was a one week time limit for this project. In this period, as a new feature, we added a shopping cart component. Users can see the product's name, unit price, and the total amount of products added to the cart. We also added an admin role to the users. If a user has an admin role, he/she will see an "Admin" button on the top-right corner of the page, and be able to add new products to the shop. In the future, we would like to enhance the shopping cart features. Also we would like to complete the orders part of the application as well as make the UI smoother and a nice experience for the users.  
 
 ## Installation
 The project is uploaded to Github.
@@ -45,26 +45,44 @@ In case the application doesn't start at `http://localhost:3000` then:
 The project has the following dependencies:
 
 For the Node.js dependencies:
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.8.4"
+    "bcrypt": "^5.1.0",  
+    
+    "body-parser": "^1.20.1",  
+    
+    "cors": "^2.8.5",  
+    
+    "dotenv": "^16.0.3",  
+    
+    "express": "^4.18.2",  
+    
+    "jsonwebtoken": "^9.0.0",  
+    
+    "mongoose": "^6.8.4"  
+    
 
-and development dependencies: 
-    "nodemon": "^2.0.20"
+ Development dependencies:  
+ 
+    "nodemon": "^2.0.20"  
+    
 
-React dependencies are:
-    "axios": "^1.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "react-router-dom": "^6.7.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
+React dependencies are:  
+
+    "axios": "^1.2.3",  
+    
+    "react": "^18.2.0",  
+    
+    "react-dom": "^18.2.0",  
+    
+    "react-icons": "^4.7.1",  
+    
+    "react-router-dom": "^6.7.0",  
+    
+    "react-scripts": "5.0.1",  
+    
+    "styled-components": "^5.3.6",  
+    
+    "web-vitals": "^2.1.4"  
+    
 
 Environmental requirements: 
 Create a .env file and fill in the following properties with your preferences.
