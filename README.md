@@ -30,7 +30,7 @@ There was a one week time limit for this project. In this period, as a new featu
   
 ## Team  
   
-- Product Owner: Mehmet TOKGOZ,
+- Product Owner: Anita (Ourania) Angelidou, Mohamed Asif Yousufi
 - Scrum Master: Sofia TACHMATZIDOU,
 - Development Team Members: Mehmet TOKGOZ, Sofia TACHMATZIDOU  
 
